@@ -1,0 +1,52 @@
+[
+  {
+    "id": "star-42-5r",
+    "name": "Star Cement 42.5R",
+    "grade": "42.5R",
+    "classType": "CEM II / A-L",
+    "standard": "GS 1118-1 : 2024",
+    "tagline": "High Early Strength Structural Engineering Portland Limestone Cement",
+    "theme": "red",
+    "compressiveStrength": {
+      "twoDay": "≥ 20.0 MPa (Typically 22-25 MPa)",
+      "twentyEightDay": "≥ 42.5 MPa (Typically 46-50 MPa)"
+    },
+    "physicalProperties": {
+      "initialSettingTime": "≥ 60 min (Typically 110-140 min)",
+      "soundness": "≤ 10 mm (Typically 1.0-2.0 mm)",
+      "finenessBlaine": "≥ 340 m²/kg (Typically 380-410 m²/kg)"
+    },
+    "summary": "Engineered for high early load bearing and heavy reinforced structural engineering. Meets GS 1118-1:2024 with high-purity reactive limestone intergrinding.",
+    "applications": [
+      "Reinforced concrete frames, suspended slabs, beams & heavy columns",
+      "High-rise foundations, raft footings & cast-in-place retaining walls",
+      "Precast bridge girders, culverts, prestressed concrete elements & spun poles",
+      "Ready-mix batching plants requiring rapid slump retention & early demoulding"
+    ]
+  },
+  {
+    "id": "star-32-5r",
+    "name": "Star Cement 32.5R",
+    "grade": "32.5R",
+    "classType": "CEM II / B-L",
+    "standard": "GS 1118-1 : 2024",
+    "tagline": "Superior Cohesion & High-Yield Commercial Masonry Cement",
+    "theme": "blue",
+    "compressiveStrength": {
+      "twoDay": "≥ 10.0 MPa (Typically 13-16 MPa)",
+      "twentyEightDay": "≥ 32.5 MPa (Typically 35-39 MPa)"
+    },
+    "physicalProperties": {
+      "initialSettingTime": "≥ 75 min (Typically 130-170 min)",
+      "soundness": "≤ 10 mm (Typically 1.0-2.5 mm)",
+      "finenessBlaine": "≥ 320 m²/kg (Typically 350-380 m²/kg)"
+    },
+    "summary": "Formulated for exceptional sandcrete block adhesion, masonry mortar, and smooth exterior plastering with maximum plastic workability.",
+    "applications": [
+      "Commercial hollow & solid sandcrete block manufacturing (high yield/bag)",
+      "Structural masonry mortar, load-bearing bricklaying & jointing",
+      "Internal wall plastering, smooth external rendering & floor screeds",
+      "Residential floor slabs, non-critical lintels, surface aprons & drainage drains"
+    ]
+  }
+]

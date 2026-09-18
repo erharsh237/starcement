@@ -1,0 +1,9 @@
+[
+  {
+    "id": "admin-1",
+    "email": "admin@starcement.com.gh",
+    "passwordHash": "$2b$12$pT6pQm.IcAtdyxLgZoI0xuSpJfdir4Jkk6Dob.ETbQfoxdYOHBiJ.",
+    "name": "Star Cement Commercial Operations Director",
+    "role": "Super Admin"
+  }
+]

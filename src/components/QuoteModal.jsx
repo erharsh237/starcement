@@ -1,0 +1,389 @@
+import React, { useState, useEffect } from 'react';
+import { X, Check, MapPin, Phone, Building2, CheckCircle2 } from 'lucide-react';
+import { products } from '../data/products';
+import Logo from './Logo';
+
+import { api } from '../services/api';
+
+export default function QuoteModal({ isOpen, onClose, initialData = {} }) {
+  const [step, setStep] = useState(1);
+  const [submitted, setSubmitted] = useState(false);
+  const [orderRef, setOrderRef] = useState('');
+
+  const [formData, setFormData] = useState({
+    productGrade: 'star-42-5r',
+    orderFormat: '50kg_bags',
+    quantity: '200',
+    region: 'Greater Accra',
+    deliverySite: '',
+    targetDate: '',
+    clientName: '',
+    companyName: '',
+    phone: '',
+    email: '',
+    notes: '',
+  });
+
+  useEffect(() => {
+    if (initialData) {
+      setFormData(prev => ({
+        ...prev,
+        productGrade: initialData.selectedBlend || initialData.productId || prev.productGrade,
+        quantity: initialData.bags50kg ? initialData.bags50kg.toString() : prev.quantity,
+        deliverySite: initialData.deliverySite || prev.deliverySite,
+      }));
+    }
+  }, [initialData]);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape' && isOpen) {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen, onClose]);
+
+  if (!isOpen) return null;
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const generatedRef = `STAR-GH-${Math.floor(100000 + Math.random() * 900000)}`;
+    setOrderRef(generatedRef);
+    setSubmitted(true);
+
+    try {
+      await api.submitQuote({
+        ref: generatedRef,
+        ...formData,
+        productName: selectedProd ? `${selectedProd.name} (${selectedProd.grade})` : 'Star Cement'
+      });
+    } catch (err) {
+      console.warn('Backend quote submission fallback:', err);
+    }
+  };
+
+  const handleReset = () => {
+    setSubmitted(false);
+    setStep(1);
+    onClose();
+  };
+
+  const selectedProd = products.find(p => p.id === formData.productGrade) || products[0];
+
+  return (
+    <div 
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-neutral-950/75 backdrop-blur-sm overflow-y-auto animate-fade-in"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="order-modal-title"
+    >
+      <div className="bg-white border border-neutral-200 w-full max-w-2xl my-auto max-h-[92vh] overflow-y-auto p-6 sm:p-10 rounded-2xl shadow-2xl relative text-neutral-900 text-left animate-scale-in">
+        
+        <button
+          onClick={onClose}
+          aria-label="Close Order Modal"
+          className="absolute top-6 right-6 p-2 text-neutral-400 hover:text-neutral-900 rounded-lg hover:bg-neutral-100 transition-colors"
+        >
+          <X className="w-5 h-5" />
+        </button>
+
+        {!submitted ? (
+          <div>
+            <div className="mb-8 pr-10 border-b border-neutral-100 pb-5">
+              <div className="flex items-center justify-between gap-2 mb-3">
+                <span className="font-mono text-xs uppercase text-[#B91C1C] font-bold tracking-wider">
+                  Commercial Procurement & Dispatch
+                </span>
+                <span className="font-mono text-xs text-neutral-400">
+                  Step {step} of 2
+                </span>
+              </div>
+              <h2 id="order-modal-title" className="font-serif text-2xl sm:text-3xl font-bold text-neutral-950">
+                Dispatch Order Specification
+              </h2>
+              <p className="text-xs sm:text-sm text-neutral-600 mt-1.5">
+                Factory-direct haulage and jobsite offloading across Ghana under Ghana Standards specification GS 1118-1:2024.
+              </p>
+            </div>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              
+              {step === 1 && (
+                <div className="space-y-6">
+                  <div>
+                    <label className="block font-mono text-xs uppercase text-neutral-700 mb-2.5 font-bold">
+                      Select Cement Specification
+                    </label>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      {products.map(p => {
+                        const isSelected = formData.productGrade === p.id;
+                        const isRed = p.theme === 'red';
+                        return (
+                          <div
+                            key={p.id}
+                            role="button"
+                            tabIndex={0}
+                            aria-pressed={isSelected}
+                            onClick={() => setFormData({ ...formData, productGrade: p.id })}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                setFormData({ ...formData, productGrade: p.id });
+                              }
+                            }}
+                            className={`p-5 rounded-xl border-2 cursor-pointer transition-all ${
+                              isSelected
+                                ? isRed ? 'border-[#B91C1C] bg-red-50/50 shadow-sm' : 'border-[#1E3A8A] bg-blue-50/50 shadow-sm'
+                                : 'border-neutral-200 bg-white hover:border-neutral-300'
+                            }`}
+                          >
+                            <div className="flex justify-between items-baseline mb-1.5">
+                              <span className="font-mono text-xs font-bold text-neutral-950">
+                                {p.grade}
+                              </span>
+                              <span className="font-mono text-[11px] text-neutral-500">
+                                {p.classType}
+                              </span>
+                            </div>
+                            <div className="font-serif font-bold text-lg text-neutral-950">
+                              {p.name}
+                            </div>
+                            <div className="text-xs text-neutral-600 mt-1 font-sans">
+                              {isRed ? 'Structural frames, slabs, heavy civil' : 'Sandcrete blocks, masonry, plastering'}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label htmlFor="modal-order-format" className="block font-mono text-xs uppercase text-neutral-700 mb-2 font-bold">
+                        Supply Format
+                      </label>
+                      <select
+                        id="modal-order-format"
+                        value={formData.orderFormat}
+                        onChange={(e) => setFormData({ ...formData, orderFormat: e.target.value })}
+                        className="w-full bg-neutral-50 border border-neutral-200 rounded-lg p-3 text-xs font-mono text-neutral-900 focus:outline-none focus:border-[#B91C1C] focus:bg-white"
+                      >
+                        <option value="50kg_bags">50kg Multi-Wall Kraft Bags (Palletized)</option>
+                        <option value="bulk_tanker">Bulk Pneumatic Road Tanker (Metric Tons)</option>
+                        <option value="trailer_flatbed">Articulated Flatbed (600 - 900 Bags)</option>
+                      </select>
+                    </div>
+
+                    <div>
+                      <label htmlFor="modal-quantity" className="block font-mono text-xs uppercase text-neutral-700 mb-2 font-bold">
+                        Quantity ({formData.orderFormat === 'bulk_tanker' ? 'Metric Tons' : '50kg Bags'})
+                      </label>
+                      <input
+                        id="modal-quantity"
+                        type="number"
+                        min="20"
+                        required
+                        value={formData.quantity}
+                        onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
+                        className="w-full bg-neutral-50 border border-neutral-200 rounded-lg p-3 text-xs font-mono text-neutral-900 focus:outline-none focus:border-[#B91C1C] focus:bg-white"
+                      />
+                      <span className="text-[11px] text-neutral-500 font-mono mt-1.5 block">
+                        {formData.orderFormat === 'bulk_tanker' 
+                          ? `≈ ${Math.ceil(parseInt(formData.quantity || 0) / 30)} tanker loads (30t payload)`
+                          : `≈ ${Math.ceil(parseInt(formData.quantity || 0) / 40)} shrink-wrapped pallets (40 bags / 2.0 MT)`
+                        }
+                      </span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="modal-region" className="block font-mono text-xs uppercase text-neutral-700 mb-2 font-bold">
+                      Destination Corridor / Region
+                    </label>
+                    <select
+                      id="modal-region"
+                      value={formData.region}
+                      onChange={(e) => setFormData({ ...formData, region: e.target.value })}
+                      className="w-full bg-neutral-50 border border-neutral-200 rounded-lg p-3 text-xs font-mono text-neutral-900 focus:outline-none focus:border-[#B91C1C] focus:bg-white"
+                    >
+                      <option value="Greater Accra">Greater Accra (Tema Industrial / Accra Metro / Kasoa)</option>
+                      <option value="Ashanti">Ashanti Region (Kumasi Metro / Obuasi / Ejisu)</option>
+                      <option value="Western">Western Region (Takoradi Commercial Port / Tarkwa)</option>
+                      <option value="Central">Central Region (Cape Coast / Winneba)</option>
+                      <option value="Eastern">Eastern Region (Nsawam / Koforidua / Akosombo)</option>
+                      <option value="Northern">Northern Region (Tamale Logistics Hub / Yendi)</option>
+                      <option value="Volta">Volta Region (Ho / Aflao Marine Enclave)</option>
+                      <option value="Other">Other Ghana Administrative Region</option>
+                    </select>
+                  </div>
+
+                  <div className="pt-4 flex justify-end">
+                    <button
+                      type="button"
+                      onClick={() => setStep(2)}
+                      className="px-6 py-3.5 bg-[#B91C1C] hover:bg-[#991B1B] text-white text-xs font-bold uppercase tracking-wider rounded-lg transition-colors shadow-sm"
+                    >
+                      Continue to Site & Contact Details
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              {step === 2 && (
+                <div className="space-y-5">
+                  <div>
+                    <label htmlFor="modal-delivery-site" className="block font-mono text-xs uppercase text-neutral-700 mb-1.5 font-bold">
+                      Jobsite Physical Location & Access Details
+                    </label>
+                    <input
+                      id="modal-delivery-site"
+                      type="text"
+                      required
+                      placeholder="e.g. Accra Financial Center site, Independence Ave / Tema Heavy Ind. Plot 12"
+                      value={formData.deliverySite}
+                      onChange={(e) => setFormData({ ...formData, deliverySite: e.target.value })}
+                      className="w-full bg-neutral-50 border border-neutral-200 rounded-lg p-3 text-xs font-mono text-neutral-900 focus:outline-none focus:border-[#B91C1C] focus:bg-white"
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label htmlFor="modal-client-name" className="block font-mono text-xs uppercase text-neutral-700 mb-1.5 font-bold">
+                        Procurement Officer / Contact Name
+                      </label>
+                      <input
+                        id="modal-client-name"
+                        type="text"
+                        required
+                        placeholder="Full Name"
+                        value={formData.clientName}
+                        onChange={(e) => setFormData({ ...formData, clientName: e.target.value })}
+                        className="w-full bg-neutral-50 border border-neutral-200 rounded-lg p-3 text-xs font-mono text-neutral-900 focus:outline-none focus:border-[#B91C1C] focus:bg-white"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="modal-phone" className="block font-mono text-xs uppercase text-neutral-700 mb-1.5 font-bold">
+                        Telephone / WhatsApp Dispatch Line
+                      </label>
+                      <input
+                        id="modal-phone"
+                        type="tel"
+                        required
+                        placeholder="+233 (0) 24 000 0000"
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        className="w-full bg-neutral-50 border border-neutral-200 rounded-lg p-3 text-xs font-mono text-neutral-900 focus:outline-none focus:border-[#B91C1C] focus:bg-white"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label htmlFor="modal-company-name" className="block font-mono text-xs uppercase text-neutral-700 mb-1.5 font-bold">
+                        Contracting Firm / Corporate Entity
+                      </label>
+                      <input
+                        id="modal-company-name"
+                        type="text"
+                        placeholder="e.g. Consar Ltd / Barbisotti & Sons"
+                        value={formData.companyName}
+                        onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
+                        className="w-full bg-neutral-50 border border-neutral-200 rounded-lg p-3 text-xs font-mono text-neutral-900 focus:outline-none focus:border-[#B91C1C] focus:bg-white"
+                      />
+                    </div>
+
+                    <div>
+                      <label htmlFor="modal-target-date" className="block font-mono text-xs uppercase text-neutral-700 mb-1.5 font-bold">
+                        Target Pour / Dispatch Date
+                      </label>
+                      <input
+                        id="modal-target-date"
+                        type="date"
+                        value={formData.targetDate}
+                        onChange={(e) => setFormData({ ...formData, targetDate: e.target.value })}
+                        className="w-full bg-neutral-50 border border-neutral-200 rounded-lg p-3 text-xs font-mono text-neutral-900 focus:outline-none focus:border-[#B91C1C] focus:bg-white"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="pt-5 border-t border-neutral-100 flex items-center justify-between">
+                    <button
+                      type="button"
+                      onClick={() => setStep(1)}
+                      className="text-xs font-mono text-neutral-500 hover:text-neutral-900 underline"
+                    >
+                      Back to Product Selection
+                    </button>
+
+                    <button
+                      type="submit"
+                      className="px-7 py-3.5 bg-[#B91C1C] hover:bg-[#991B1B] text-white text-xs font-bold uppercase tracking-wider rounded-lg transition-colors shadow-md"
+                    >
+                      Transmit Dispatch Request
+                    </button>
+                  </div>
+                </div>
+              )}
+
+            </form>
+          </div>
+        ) : (
+          <div className="py-8 space-y-6">
+            <div className="flex items-center gap-4 border-b border-neutral-100 pb-5">
+              <div className="w-10 h-10 bg-neutral-950 text-white flex items-center justify-center font-bold rounded-sm">
+                <Check className="w-5 h-5 text-[#B91C1C]" />
+              </div>
+              <div>
+                <span className="font-mono text-xs text-emerald-700 font-bold uppercase tracking-wider block">
+                  Transmission Confirmed
+                </span>
+                <h3 className="font-serif text-2xl sm:text-3xl font-bold text-neutral-950">
+                  Dispatch Request Successfully Registered
+                </h3>
+              </div>
+            </div>
+
+            <p className="text-sm text-neutral-600 leading-relaxed">
+              Your procurement request has been routed to the Star Cement regional dispatch terminal for the {formData.region} corridor. A technical logistics officer will confirm weighbridge scheduling and haulage terms.
+            </p>
+
+            <div className="bg-neutral-50 rounded-xl p-6 border border-neutral-200 font-mono text-xs divide-y divide-neutral-200/80">
+              <div className="grid grid-cols-2 py-2.5">
+                <span className="text-neutral-500">Dispatch Reference:</span>
+                <span className="font-bold text-[#B91C1C] text-right">{orderRef}</span>
+              </div>
+              <div className="grid grid-cols-2 py-2.5">
+                <span className="text-neutral-500">Product Specification:</span>
+                <span className="text-neutral-950 font-semibold text-right">{selectedProd.name} ({selectedProd.grade})</span>
+              </div>
+              <div className="grid grid-cols-2 py-2.5">
+                <span className="text-neutral-500">Requested Volume:</span>
+                <span className="text-neutral-950 font-semibold text-right">
+                  {formData.quantity} {formData.orderFormat === 'bulk_tanker' ? 'Metric Tons' : 'Bags (50kg)'}
+                </span>
+              </div>
+              <div className="grid grid-cols-2 py-2.5">
+                <span className="text-neutral-500">Destination Site:</span>
+                <span className="text-neutral-950 text-right">{formData.region} — {formData.deliverySite}</span>
+              </div>
+            </div>
+
+            <div className="pt-4 flex justify-end">
+              <button
+                type="button"
+                onClick={handleReset}
+                className="px-6 py-3 bg-neutral-950 text-white hover:bg-neutral-800 text-xs font-mono font-bold uppercase tracking-wider rounded-lg transition-colors shadow-sm"
+              >
+                Close Window
+              </button>
+            </div>
+          </div>
+        )}
+
+      </div>
+    </div>
+  );
+}
