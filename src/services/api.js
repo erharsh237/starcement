@@ -3,7 +3,7 @@ import { products as fallbackProducts } from '../data/products';
 import { plants as fallbackPlants } from '../data/plants';
 import { dealers as fallbackDealers } from '../data/dealers';
 
-const API_BASE = '/api';
+const API_BASE = import.meta.env.VITE_API_URL || '/api';
 
 // Helper for authorized headers
 function getAuthHeaders() {
