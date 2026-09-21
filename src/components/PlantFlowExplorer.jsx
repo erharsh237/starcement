@@ -30,7 +30,7 @@ export default function PlantFlowExplorer() {
         { label: 'Offloading Technology', val: 'Enclosed Screw Conveyor (Zero Marine Spillage)' },
         { label: 'Dust Suppression', val: 'Negative-Pressure Vacuum Skirts' },
       ],
-      description: 'Raw clinker is imported and discharged directly at Port of Tema Berth 2. The continuous mechanical unloader operates completely enclosed, preventing cargo dust from escaping into the ocean or municipal harbor atmosphere.'
+      description: 'Raw mineral material is imported and discharged directly at Port of Tema Berth 2. The continuous mechanical unloader operates completely enclosed, preventing cargo dust from escaping into the ocean or municipal harbor atmosphere.'
     },
     {
       id: 'conveyor',
@@ -44,21 +44,21 @@ export default function PlantFlowExplorer() {
         { label: 'Road Traffic Impact', val: 'Eliminates 180+ daily harbor truck trips' },
         { label: 'Sensor Grid', val: 'Optic Fiber Belt Rip & Heat Detection' },
       ],
-      description: 'A 2.4-kilometer enclosed overland conveyor transports clinker directly from the vessel hold into our plant boundary. This eliminates all truck transit through Tema commercial streets and completely isolates raw materials from tropical rain.'
+      description: 'A 2.4-kilometer enclosed overland conveyor transports raw materials directly from the vessel hold into our plant boundary. This eliminates all truck transit through Tema commercial streets and completely isolates raw materials from tropical rain.'
     },
     {
       id: 'dome',
-      title: '03. Geodesic Clinker Dome',
+      title: '03. Geodesic Storage Dome',
       category: 'Raw Storage',
       equipment: '65,000 MT Covered Space-Frame Dome & Reclaimer',
-      capacity: '65,000 Metric Tons Clinker Buffer',
+      capacity: '65,000 Metric Tons Raw Material Buffer',
       specs: [
         { label: 'Clear-Span Diameter', val: '88 Meters Geodesic Steel Space Frame' },
         { label: 'Reclaimer System', val: 'Circular Portal Scraper Reclaimer' },
         { label: 'Micro-Fogging', val: 'High-Pressure Acoustic Dust Mist Suppression' },
         { label: 'Raw Homogenization', val: 'Chevron Stacking for Batch Uniformity' },
       ],
-      description: 'The monumental 88-meter geodesic dome buffers enough imported clinker to guarantee four months of uninterrupted grinding. Raw clinker is blended via chevron stacking to equalize raw chemical baselines before mill feed.'
+      description: 'The monumental 88-meter geodesic dome buffers enough raw material to guarantee four months of uninterrupted grinding. Raw materials are blended via chevron stacking to equalize baselines before mill feed.'
     },
     {
       id: 'vrm',
@@ -72,7 +72,7 @@ export default function PlantFlowExplorer() {
         { label: 'Specific Surface', val: 'Directly adjustable from 3,800 to 4,500 cm²/g' },
         { label: 'Acoustic Enclosure', val: '< 75 dBA at plant perimeter boundary' },
       ],
-      description: 'Our high-efficiency Loesche VRM grinds clinker, high-calcium limestone, and natural gypsum simultaneously. Hydraulic rollers crush feed against a rotating table, creating the precise particle size distribution needed for rapid hydration.'
+      description: 'Our high-efficiency Loesche VRM grinds raw minerals, high-calcium limestone, and natural gypsum simultaneously. Hydraulic rollers crush feed against a rotating table, creating the precise particle size distribution needed for rapid hydration.'
     },
     {
       id: 'separator',

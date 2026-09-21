@@ -56,7 +56,7 @@ export default function LeadershipPage({ onOpenQuote }) {
       role: 'Executive Director',
       image: '/images/leadership/pankaj-kejriwal.jpg',
       tenure: 'Executive Director • Heavy Industrial Technocrat',
-      bio: 'An expert industrialist with deep specialization in finish grinding systems, clinker logistics, and mechanical reliability. Oversees ongoing technical operations, preventive engineering systems, and statutory laboratory quality conformance.',
+      bio: 'An expert industrialist with deep specialization in finish grinding systems, raw materials logistics, and mechanical reliability. Oversees ongoing technical operations, preventive engineering systems, and statutory laboratory quality conformance.',
       focus: 'Technical Operations, Grinding Plant Optimization & Statutory Laboratory Standards'
     }
   ];
@@ -116,7 +116,7 @@ export default function LeadershipPage({ onOpenQuote }) {
       role: 'Independent Director',
       image: '/images/leadership/vivek-chawla.jpg',
       tenure: 'Independent Director • Cement Industry Veteran',
-      bio: 'Distinguished cement sector authority with over 35 years of core leadership in high-capacity cement manufacturing plants. Directs strategic focus toward finish grinding optimization, clinker ratio reduction, and alternative fuels.',
+      bio: 'Distinguished cement sector authority with over 35 years of core leadership in high-capacity cement manufacturing plants. Directs strategic focus toward finish grinding optimization, energy efficiency, and low-carbon cement production.',
       focus: 'Cement Manufacturing Technology, Energy Efficiency & Technical Excellence'
     },
     {
@@ -352,7 +352,7 @@ export default function LeadershipPage({ onOpenQuote }) {
               </div>
               <h3 className="text-sm font-bold text-neutral-900 mb-1.5">Technical Quality Advisory Committee</h3>
               <p className="text-xs text-neutral-600 leading-relaxed">
-                Supervises statutory GS 1118-1:2024 compliance, daily clinker mineralogy, automated Blaine fineness audits, and independent 28-day break tests.
+                Supervises statutory GS 1118-1:2024 compliance, daily raw material mineralogy, automated Blaine fineness audits, and independent 28-day break tests.
               </p>
             </div>
 
@@ -362,7 +362,7 @@ export default function LeadershipPage({ onOpenQuote }) {
               </div>
               <h3 className="text-sm font-bold text-neutral-900 mb-1.5">Sustainability & ESG Directorate</h3>
               <p className="text-xs text-neutral-600 leading-relaxed">
-                Oversees industrial clinker factor reduction, waste heat recovery turbines, and statutory EPA environmental conformance across all facilities.
+                Oversees industrial energy efficiency, waste heat recovery turbines, and statutory EPA environmental conformance across all facilities.
               </p>
             </div>
 
@@ -400,7 +400,7 @@ export default function LeadershipPage({ onOpenQuote }) {
               className="p-4 bg-neutral-800/70 hover:bg-neutral-800 rounded-md border border-neutral-700/70 transition-colors block reveal-card"
             >
               <h4 className="text-xs sm:text-sm font-bold text-white mb-1">Tema Quality Testing Lab →</h4>
-              <p className="text-[11px] text-neutral-400">Continuous clinker spectrometry & compressive tests</p>
+              <p className="text-[11px] text-neutral-400">Continuous mineral spectrometry & compressive tests</p>
             </Link>
 
             <Link 

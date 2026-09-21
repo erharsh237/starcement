@@ -112,7 +112,7 @@ export default function HydrationSimulator({ initialGrade = 'both' }) {
             Hydration Kinetics & Strength Gain Trajectory
           </h3>
           <p className="text-xs text-neutral-400 mt-1 max-w-xl">
-            Examine how Star Cement’s micro-limestone and low-alkali clinker transform from fluid paste into an impenetrable crystalline monolith over time.
+            Examine how Star Cement’s micro-limestone and refined mineral hydraulic binder transform from fluid paste into an impenetrable crystalline monolith over time.
           </p>
         </div>
 

@@ -66,7 +66,7 @@ export default function VisionMissionPage({ onOpenQuote }) {
               </span>
               <span className="text-neutral-400 text-xs">•</span>
               <span className="text-neutral-300 text-xs font-mono">
-                Since 2021 • Kpone Industrial Area
+                Kpone Industrial Area • Greater Accra
               </span>
             </div>
 

@@ -78,7 +78,7 @@ export default function AboutPage({ onOpenQuote }) {
           <div className="max-w-3xl">
             <div className="flex items-center gap-2 mb-3">
               <span className="px-2.5 py-0.5 rounded-xs bg-[#B91C1C] text-white text-[10px] font-mono uppercase font-bold tracking-widest">
-                Corporate Profile • Since 2021
+                Corporate Profile
               </span>
               <span className="text-neutral-400 text-xs">•</span>
               <span className="text-neutral-300 text-xs font-mono">
@@ -90,7 +90,7 @@ export default function AboutPage({ onOpenQuote }) {
               Building Ghana’s future with strength, reliability & affordability.
             </h1>
             <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-normal">
-              Star Cement Ltd. is a privately owned cement manufacturing company established in 2021, operating a modern 750,000 MT annual capacity facility in the Kpone Industrial Area, Greater Accra Region of Ghana.
+              Star Cement Group of Companies Africa operates a modern 750,000 MT annual capacity facility in the Kpone Industrial Area, Greater Accra Region of Ghana.
             </p>
           </div>
 
@@ -131,11 +131,11 @@ export default function AboutPage({ onOpenQuote }) {
                 Our Foundation & Vision
               </span>
               <h2 className="text-2xl sm:text-3xl font-serif font-bold text-neutral-900 leading-tight">
-                Star Cement Ltd. — Supporting Ghana’s Nation-Building Agenda
+                Star Cement Group of Companies Africa — Supporting Industrial Growth
               </h2>
               
               <p className="text-sm text-neutral-600 leading-relaxed font-normal">
-                Star Cement Ltd. is a privately owned cement manufacturing company established in 2021 and strategically located at <strong>AGR/IND/Y/5, Kpone Industrial Area, Kpone</strong>, in the Greater Accra Region of Ghana. The company was founded with a clear vision to deliver high-quality cement products that combine <strong>strength, reliability, and affordability</strong>, while supporting Ghana’s development and nation-building agenda in a responsible and sustainable manner.
+                Star Cement Group of Companies Africa is an industrial cement manufacturing enterprise strategically located at <strong>AGR/IND/Y/5, Kpone Industrial Area, Kpone</strong>, in the Greater Accra Region of Ghana. The company was founded with a clear vision to deliver high-quality cement products that combine <strong>strength, reliability, and affordability</strong>, while supporting Ghana’s development and African infrastructure growth in a responsible and sustainable manner.
               </p>
               
               <p className="text-sm text-neutral-600 leading-relaxed font-normal">
@@ -148,10 +148,7 @@ export default function AboutPage({ onOpenQuote }) {
 
               <div className="pt-2 flex flex-wrap gap-2.5">
                 <div className="px-3 py-1.5 bg-neutral-100 rounded text-xs font-mono font-bold text-neutral-800">
-                  Established 2021
-                </div>
-                <div className="px-3 py-1.5 bg-neutral-100 rounded text-xs font-mono font-bold text-neutral-800">
-                  750,000 MT Installed Capacity
+                  750,000 MT Annual Capacity
                 </div>
                 <div className="px-3 py-1.5 bg-neutral-100 rounded text-xs font-mono font-bold text-neutral-800">
                   75 TPH Grinding Mill
@@ -161,6 +158,9 @@ export default function AboutPage({ onOpenQuote }) {
                 </div>
                 <div className="px-3 py-1.5 bg-neutral-100 rounded text-xs font-mono font-bold text-neutral-800">
                   GS 1118:2024
+                </div>
+                <div className="px-3 py-1.5 bg-neutral-100 rounded text-xs font-mono font-bold text-neutral-800">
+                  ISO Certified (IMS)
                 </div>
               </div>
             </div>

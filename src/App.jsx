@@ -202,6 +202,7 @@ export default function App() {
                 onTransferToQuote={handleTransferToQuote}
                 onSelectPlantForQuote={handleSelectPlantForQuote}
                 onContactRep={handleContactRep}
+                onOpenDealers={handleOpenDealers}
               />
             } 
           />

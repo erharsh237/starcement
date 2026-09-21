@@ -70,7 +70,7 @@ export default function PlantsPage({ plants, onSelectPlantForQuote }) {
               <div className="w-10 h-10 rounded-lg bg-red-50 text-[#B91C1C] flex items-center justify-center mb-4">
                 <Ship className="w-5 h-5" />
               </div>
-              <h3 className="text-base font-bold text-neutral-900 mb-2">Deepwater Marine Clinker Terminal</h3>
+              <h3 className="text-base font-bold text-neutral-900 mb-2">Deepwater Marine Bulk Terminal</h3>
               <p className="text-xs text-neutral-600 leading-relaxed">
                 Direct enclosed pneumatic pipeline conveyance from Tema Port bulk vessel berths directly to terminal silos, eliminating fugitive dust emissions and material contamination.
               </p>

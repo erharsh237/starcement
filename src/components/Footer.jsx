@@ -52,7 +52,7 @@ export default function Footer({ onOpenQuote, onOpenCalculator }) {
             <Logo light={true} />
 
             <p className="text-sm text-neutral-400 leading-relaxed pt-1">
-              Star Cement Ltd. is a privately owned cement manufacturing company established in 2021, operating a modern 750,000 MT grinding facility with a 75 TPH closed-circuit mill and slip-form silo complex in the Kpone Industrial Area, Greater Accra, under strict compliance with GS 1118:2024.
+              Star Cement Group of Companies Africa is an industrial cement manufacturing enterprise operating a modern 750,000 MT grinding facility with a 75 TPH closed-circuit mill and slip-form silo complex in the Kpone Industrial Area, Greater Accra, under strict compliance with GS 1118:2024.
             </p>
 
             <div className="text-xs font-mono text-neutral-400 space-y-2 pt-3 border-t border-neutral-800">
@@ -171,7 +171,7 @@ export default function Footer({ onOpenQuote, onOpenCalculator }) {
               <li>
                 <Link to="/plants/raw-material-handling" className="block group">
                   <span className="font-semibold text-white block text-sm font-sans group-hover:text-[#B91C1C] transition-colors">Tema Port Raw Materials Intake</span>
-                  <span className="text-neutral-500">Bulk Clinker, Gypsum & Limestone</span>
+                  <span className="text-neutral-500">Bulk High-Purity Minerals & Limestone</span>
                 </Link>
               </li>
             </ul>
@@ -216,7 +216,7 @@ export default function Footer({ onOpenQuote, onOpenCalculator }) {
         {/* Bottom Legal & Technical Disclaimer Bar */}
         <div className="mt-16 pt-8 border-t border-neutral-800 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs font-mono text-neutral-500">
           <div>
-            © {new Date().getFullYear()} STAR CEMENT GHANA LIMITED. ALL RIGHTS RESERVED.
+            © {new Date().getFullYear()} STAR CEMENT GROUP OF COMPANIES AFRICA. ALL RIGHTS RESERVED.
           </div>
           <div className="flex flex-wrap items-center gap-6">
             <span>GHANA STANDARDS AUTHORITY CERTIFIED</span>

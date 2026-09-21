@@ -53,7 +53,7 @@ export default function BagLayerPeeler() {
         { label: 'Shelf-Life Extension', val: 'Maintains freshness up to 180 days' },
         { label: 'Condensation Barrier', val: '100% Waterproof Impermeable Barrier' },
       ],
-      description: 'The critical tropical defense layer. During Ghana’s intense monsoon season (humidity > 85%), this micro-thin polyethylene liner prevents water vapor from reacting prematurely with active clinker compounds while allowing trapped air to vent during automated rotary packing.'
+      description: 'The critical tropical defense layer. During Ghana’s intense monsoon season (humidity > 85%), this micro-thin polyethylene liner prevents water vapor from reacting prematurely with active hydraulic cement compounds while allowing trapped air to vent during automated rotary packing.'
     },
     {
       index: 4,

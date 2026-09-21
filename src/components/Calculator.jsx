@@ -363,7 +363,7 @@ Recommended Product: ${analysis.recommendedGrade}`;
                 <span className="text-emerald-800">-{analysis.co2SavedKg.toLocaleString()} kg CO₂</span>
               </div>
               <p className="text-[11px] text-neutral-600 font-mono leading-relaxed">
-                Using Star Portland Limestone Cement (PLC) saves ~18% clinker carbon vs standard OPC. Equivalent to <strong>{analysis.treesEquivalent} tropical trees</strong> absorbing carbon for 1 year.
+                Using Star Portland Limestone Cement (PLC) saves ~18% embodied carbon vs standard OPC. Equivalent to <strong>{analysis.treesEquivalent} tropical trees</strong> absorbing carbon for 1 year.
               </p>
             </div>
 

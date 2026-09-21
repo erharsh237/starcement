@@ -22,7 +22,7 @@ export default function RawMaterialHandlingPage({ onOpenQuote }) {
 
   const handlingSpecs = [
     { label: 'Marine Intake Terminal', val: 'Tema Port Deepwater Bulk Cargo Berths' },
-    { label: 'Raw Mineral Additives', val: 'Clinker, High-Purity Gypsum, Reactive Limestone' },
+    { label: 'Raw Mineral Additives', val: 'High-Purity Gypsum, Reactive Limestone & Performance Minerals' },
     { label: 'Conveyor Architecture', val: 'Fully Enclosed Weather-Proof Overland Galleries' },
     { label: 'Dosing Technology', val: 'Schenck Process Digital Loss-in-Weight Feeders' },
     { label: 'Weighing Accuracy', val: '±0.25% Precision Stoichiometric Additive Dosing' },
@@ -35,13 +35,13 @@ export default function RawMaterialHandlingPage({ onOpenQuote }) {
     {
       title: 'Deepwater Marine Port Connection',
       subtitle: 'Seamless Intake from Upgraded Tema Port',
-      desc: 'The Star Cement Ghana plant is located within the Kpone/Tema maritime industrial enclave, minutes away from the newly expanded Tema Port. Bulk vessel shipments of premium clinker and high-purity gypsum discharge directly onto high-capacity dumpers and heavy haulage units with zero maritime congestion delays.',
+      desc: 'The Star Cement Ghana plant is located within the Kpone/Tema maritime industrial enclave, minutes away from the newly expanded Tema Port. Bulk vessel shipments of premium raw minerals and high-purity gypsum discharge directly onto high-capacity dumpers and heavy haulage units with zero maritime congestion delays.',
       icon: Anchor
     },
     {
       title: 'Enclosed Weather-Proof Conveyor Galleries',
       subtitle: 'Zero Moisture Ingress & Zero Fugitive Dust',
-      desc: 'All transfer belts, bucket elevators, and overland tripper conveyors operate within enclosed steel galleries. This seals raw materials from tropical downpours and humid coastal sea air, guaranteeing the clinker remains completely dry and active prior to finish grinding.',
+      desc: 'All transfer belts, bucket elevators, and overland tripper conveyors operate within enclosed steel galleries. This seals raw materials from tropical downpours and humid coastal sea air, guaranteeing the materials remain completely dry and active prior to finish grinding.',
       icon: Wind
     },
     {
@@ -72,7 +72,7 @@ export default function RawMaterialHandlingPage({ onOpenQuote }) {
     {
       src: '/images/plant/plant-silos-slipform.jpg',
       title: 'Silo Material Transfer Towers',
-      caption: 'Vertical transfer towers channeling blended clinker into the finish grinding mill circuit.'
+      caption: 'Vertical transfer towers channeling blended raw materials into the finish grinding mill circuit.'
     },
     {
       src: '/images/plant/plant-silo-crane.jpg',
@@ -111,7 +111,7 @@ export default function RawMaterialHandlingPage({ onOpenQuote }) {
               Raw Material Handling & Tema Port Logistics
             </h1>
             <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-normal">
-              Direct connection to the upgraded Port of Tema, enclosed high-capacity conveyor galleries, and automated digital weighfeeders blending premium clinker, gypsum, and limestone with pinpoint stoichiometric accuracy.
+              Direct connection to the upgraded Port of Tema, enclosed high-capacity conveyor galleries, and automated digital weighfeeders blending premium raw materials with pinpoint accuracy.
             </p>
           </div>
 
@@ -153,7 +153,7 @@ export default function RawMaterialHandlingPage({ onOpenQuote }) {
             Engineered for Continuous, Uncontaminated Mineral Supply
           </h2>
           <p className="text-sm text-neutral-600 mt-3 leading-relaxed">
-            Cement quality is fundamentally determined by the purity of its input minerals and the precision of its additive blending. Star Cement Ghana’s materials handling systems are designed from the ground up to capture deepwater vessel cargo directly from Tema Port, protect materials in hermetic galleries, and dose additives with clinical precision.
+            Cement quality is fundamentally determined by the purity of its input minerals and the precision of its additive blending. Star Cement Group of Companies Africa’s materials handling systems are designed from the ground up to capture deepwater vessel cargo directly from Tema Port, protect materials in hermetic galleries, and dose additives with clinical precision.
           </p>
         </div>
 

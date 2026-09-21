@@ -81,12 +81,12 @@ export default function ContactPage() {
               </span>
               <span className="text-neutral-400 text-xs">•</span>
               <span className="text-neutral-300 text-xs font-mono">
-                Since 2021 • Kpone Industrial Area
+                Kpone Industrial Area • Greater Accra
               </span>
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-white tracking-tight leading-tight mb-4">
-              Connect with Star Cement Ltd.
+              Connect with Star Cement Group of Companies Africa
             </h1>
             <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-normal">
               Direct dispatch desk, contractor accounts, and wholesale distribution support. Connect directly with our team at Plot AGR/IND/Y/5, A&B, Kpone Industrial Area, Greater Accra.
@@ -115,9 +115,9 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className="flex items-center gap-2 mb-1">
-                      <h3 className="text-base font-bold text-neutral-900">Star Cement Ltd.</h3>
+                      <h3 className="text-base font-bold text-neutral-900">Star Cement Group of Companies Africa</h3>
                       <span className="text-[10px] font-mono uppercase bg-neutral-100 px-2 py-0.5 rounded text-neutral-600 font-semibold">
-                        Since 2021
+                        GS 1118:2024
                       </span>
                     </div>
                     <p className="text-xs text-neutral-600 leading-relaxed font-medium">

@@ -40,7 +40,7 @@ export default function SiloArchitecturePage({ onOpenQuote }) {
     {
       title: 'Hydrostatic & Dynamic Lateral Load Resistance',
       subtitle: 'Engineered for Heavy Mass Flow Pressures',
-      desc: 'Bulk clinker and pulverized Portland limestone exert massive dynamic lateral pressures during rapid discharge. The silo shells feature high-density circumferential rebar arrays engineered to absorb seismic ground acceleration, cyclic thermal expansion, and hydrostatic compaction stresses without micro-fissuring.',
+      desc: 'Bulk cement and pulverized minerals exert massive dynamic lateral pressures during rapid discharge. The silo shells feature high-density circumferential rebar arrays engineered to absorb seismic ground acceleration, cyclic thermal expansion, and hydrostatic compaction stresses without micro-fissuring.',
       icon: Gauge
     },
     {

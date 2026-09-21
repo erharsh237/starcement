@@ -26,8 +26,8 @@ export default function Logo({ light = false, className = '', showText = true, s
               CEMENT
             </span>
           </div>
-          <span className={`font-mono text-[9px] font-bold uppercase tracking-[0.24em] mt-1 ${light ? 'text-neutral-400' : 'text-neutral-500'}`}>
-            GHANA • SOLID SETTING
+          <span className={`font-mono text-[8.5px] sm:text-[9px] font-bold uppercase tracking-[0.14em] mt-1 ${light ? 'text-neutral-300' : 'text-neutral-600'}`}>
+            GROUP OF COMPANIES AFRICA
           </span>
         </div>
       )}

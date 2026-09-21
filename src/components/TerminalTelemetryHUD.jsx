@@ -42,7 +42,7 @@ export default function TerminalTelemetryHUD({ onOpenQuote }) {
       silos: [
         { name: 'Silo 01 (42.5R Finished)', current: 8420, max: 10000, grade: 'CEM II/A-L' },
         { name: 'Silo 02 (32.5R Finished)', current: 9150, max: 10000, grade: 'CEM II/B-L' },
-        { name: 'Silo 03 (Clinker Buffer)', current: 8900, max: 10000, grade: 'Low-Alkali' },
+        { name: 'Silo 03 (Raw Material Buffer)', current: 8900, max: 10000, grade: 'Standard' },
         { name: 'Silo 04 (Limestone Filler)', current: 7650, max: 10000, grade: 'High-CaCO3' },
       ],
       recentDispatches: [

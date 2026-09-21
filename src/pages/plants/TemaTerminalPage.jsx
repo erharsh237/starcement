@@ -24,7 +24,7 @@ export default function TemaTerminalPage({ onOpenQuote }) {
 
   const technicalSpecs = [
     { label: 'Annual Grinding Throughput', val: '750,000 Metric Tons / Year' },
-    { label: 'Raw Clinker & Cement Silos', val: 'Vertical Slip-Form Casting Concrete Storage Silos' },
+    { label: 'Raw Materials & Cement Silos', val: 'Vertical Slip-Form Casting Concrete Storage Silos' },
     { label: 'Grinding Technology', val: '75 TPH High-Efficiency Closed-Circuit Mill with Advanced Separators' },
     { label: 'Packing & Loading System', val: 'Automated Rotor Packer & Bulk Loading with Real-Time Weight Control' },
     { label: 'Process Control Architecture', val: 'Integrated PLC- & SCADA-Based Central Digital Automation' },
@@ -63,7 +63,7 @@ export default function TemaTerminalPage({ onOpenQuote }) {
                 Star Cement Ghana Greenfield Grinding Plant
               </h1>
               <p className="text-sm sm:text-base text-neutral-300 leading-relaxed max-w-2xl font-normal mb-6">
-                Established in 2021, Star Cement Ltd is a privately owned cement manufacturer located in the Kpone Industrial Area, Greater Accra. Operating a state-of-the-art 750,000 MT/year facility powered by a 75 TPH closed-circuit mill and PLC/SCADA digital control.
+                Star Cement Group of Companies Africa operates a state-of-the-art 750,000 MT/year cement manufacturing facility powered by a 75 TPH closed-circuit mill and PLC/SCADA digital control in the Kpone Industrial Area, Greater Accra.
               </p>
 
               <div className="flex flex-wrap gap-4 text-xs font-mono text-neutral-300">
@@ -138,7 +138,7 @@ export default function TemaTerminalPage({ onOpenQuote }) {
                   Direct Deepwater Marine Vessel Offloading
                 </h2>
                 <p className="text-xs sm:text-sm text-neutral-700 leading-relaxed mb-4">
-                  Star Cement operates a dedicated deepwater concession at Port of Tema Berth 2. Supramax and Ultramax bulk carriers carrying up to 60,000 metric tons of clinker are discharged via high-capacity mechanical ship unloaders directly onto a 2.4-kilometer enclosed overland pipe conveyor.
+                  Star Cement Group of Companies Africa operates a dedicated deepwater concession at Port of Tema Berth 2. Supramax and Ultramax bulk carriers carrying up to 60,000 metric tons of raw materials are discharged via high-capacity mechanical ship unloaders directly onto a 2.4-kilometer enclosed overland pipe conveyor.
                 </p>
                 <p className="text-xs sm:text-sm text-neutral-700 leading-relaxed">
                   This state-of-the-art logistics corridor completely bypasses municipal road networks, eliminating over 150 daily truck trips through harbor roads, minimizing ambient fugitive dust, and guaranteeing zero weather-related demurrage delays during seasonal monsoons.
@@ -147,7 +147,7 @@ export default function TemaTerminalPage({ onOpenQuote }) {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
                 <div className="bg-white p-4 rounded-xs border border-neutral-200">
-                  <span className="text-[#B91C1C] font-bold block text-sm mb-1">Closed Clinker Dome</span>
+                  <span className="text-[#B91C1C] font-bold block text-sm mb-1">Enclosed Storage Dome</span>
                   <span className="text-neutral-600">65,000 MT covered geodesic dome with automated dust suppression foggers.</span>
                 </div>
                 <div className="bg-white p-4 rounded-xs border border-neutral-200">

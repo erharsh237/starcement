@@ -141,7 +141,7 @@ export default function PlantLocator({ onSelectPlantForQuote }) {
                     Vertical Slip-Form Silo Architecture
                   </h4>
                   <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal mb-4">
-                    The plant features high-capacity concrete storage silos erected utilizing specialized vertical slip-form casting construction, ensuring monolithic wall strength and complete hermetic moisture isolation for clinker and finished cement.
+                    The plant features high-capacity concrete storage silos erected utilizing specialized vertical slip-form casting construction, ensuring monolithic wall strength and complete hermetic moisture isolation for raw materials and finished cement.
                   </p>
                 </div>
                 <Link
@@ -166,7 +166,7 @@ export default function PlantLocator({ onSelectPlantForQuote }) {
                     Tema Port Bulk Handling Systems
                   </h4>
                   <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal mb-4">
-                    Utilizes specialized heavy bulk conveyors and precision feed blending systems engineered to receive, store, and blend core additives—clinker, high-grade gypsum, and pozzolanic limestone—flowing directly from the upgraded Tema Port.
+                    Utilizes specialized heavy bulk conveyors and precision feed blending systems engineered to receive, store, and blend core mineral additives—high-grade gypsum and reactive pozzolanic limestone—flowing directly from the upgraded Tema Port.
                   </p>
                 </div>
                 <Link

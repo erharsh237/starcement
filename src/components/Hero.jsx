@@ -52,7 +52,7 @@ export default function Hero({ onOpenQuote, onOpenCalculator }) {
               
               {/* Technical Classification */}
               <div className="font-mono text-[11px] font-bold uppercase tracking-wider text-[#B91C1C] mb-2.5 animate-fade-in">
-                Star Cement Ltd. • Established 2021 • GS 1118:2024
+                Star Cement Group of companies Africa • GS 1118:2024 Conformance
               </div>
 
               {/* Refined Headline Scale */}
@@ -62,7 +62,7 @@ export default function Hero({ onOpenQuote, onOpenCalculator }) {
 
               {/* Concise Narrative */}
               <p className="text-xs sm:text-sm text-neutral-600 leading-relaxed font-normal mb-6">
-                Operating a modern <strong>750,000 MT/year</strong> facility with a 75 TPH closed-circuit grinding mill in the Kpone Industrial Area, Star Cement manufactures certified <strong>CEM II/A-L 42.5R</strong> and <strong>CEM II/B-L 32.5R</strong> for Ghana's nation-building agenda.
+                Operating a modern <strong>750,000 MT/year</strong> facility with a 75 TPH closed-circuit grinding mill in the Kpone Industrial Area, <strong>Star Cement Group of companies Africa</strong> manufactures certified <strong>CEM II/A-L 42.5R</strong> and <strong>CEM II/B-L 32.5R</strong> for Ghana and African infrastructure development.
               </p>
 
               {/* Compact Action Buttons with Tactile Micro-Animations */}

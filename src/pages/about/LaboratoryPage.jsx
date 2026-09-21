@@ -17,10 +17,10 @@ import {
 export default function LaboratoryPage({ onOpenQuote }) {
   const testingStations = [
     {
-      title: 'Automated XRF Clinker Spectrometry',
+      title: 'Automated XRF Mineral Spectrometry',
       standard: 'ISO 29581-2 • ASTM C114',
       interval: 'Every 2 Hours (24/7)',
-      desc: 'Our energy-dispersive X-Ray Fluorescence spectrometer continuously maps elemental composition: Tricalcium Silicate (C₃S), Dicalcium Silicate (C₂S), Tricalcium Aluminate (C₃A), and Tetracalcium Aluminoferrite (C₄AF). Ensures rapid hardening strength without alkali-silica reactivity risks.',
+      desc: 'Our energy-dispersive X-Ray Fluorescence spectrometer continuously maps elemental composition and mineral oxides. Ensures rapid hardening strength without alkali-silica reactivity risks.',
       metrics: [
         { label: 'SO₃ Sulfate', val: '2.45% (≤ 3.5% Max)' },
         { label: 'Chloride Cl⁻', val: '0.035% (≤ 0.10% Max)' },
@@ -189,7 +189,7 @@ export default function LaboratoryPage({ onOpenQuote }) {
               From Deepwater Vessel to Sealed Sack
             </h2>
             <p className="text-sm text-neutral-600 mt-3 leading-relaxed">
-              How raw imported clinker and high-purity Ghanaian limestone pass through four rigorous laboratory checkpoints before dispatch.
+              How raw input minerals and high-purity Ghanaian limestone pass through four rigorous laboratory checkpoints before dispatch.
             </p>
           </div>
 
@@ -197,18 +197,18 @@ export default function LaboratoryPage({ onOpenQuote }) {
             <div className="bg-white p-6 rounded-xl border border-neutral-200 shadow-sm relative">
               <span className="font-mono text-2xl font-black text-[#B91C1C]/20 absolute top-4 right-4">01</span>
               <div className="text-xs font-mono font-bold text-[#B91C1C] uppercase mb-1">Berth Discharge</div>
-              <h3 className="text-sm font-bold text-neutral-900 mb-2">Vessel Clinker Assay</h3>
+              <h3 className="text-sm font-bold text-neutral-900 mb-2">Vessel Bulk Mineral Assay</h3>
               <p className="text-xs text-neutral-600 leading-relaxed">
-                Representative core grab samples taken directly from bulk vessel holds. Tested for free lime, alkali content, and moisture before transfer into 40,000 MT silos.
+                Representative core grab samples taken directly from bulk vessel holds. Tested for moisture, composition, and alkali content before transfer into bulk silos.
               </p>
             </div>
 
             <div className="bg-white p-6 rounded-xl border border-neutral-200 shadow-sm relative">
               <span className="font-mono text-2xl font-black text-[#B91C1C]/20 absolute top-4 right-4">02</span>
               <div className="text-xs font-mono font-bold text-[#B91C1C] uppercase mb-1">Mill Proportioning</div>
-              <h3 className="text-sm font-bold text-neutral-900 mb-2">Continuous Limestone Blending</h3>
+              <h3 className="text-sm font-bold text-neutral-900 mb-2">Continuous Mineral Blending</h3>
               <p className="text-xs text-neutral-600 leading-relaxed">
-                Computerized weigh-feeders regulate clinker, gypsum, and high-calcium limestone ratios into finish ball mills with automated laser particle analysis.
+                Computerized weigh-feeders regulate raw mineral, gypsum, and high-calcium limestone ratios into finish ball mills with automated laser particle analysis.
               </p>
             </div>
 

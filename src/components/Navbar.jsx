@@ -121,7 +121,7 @@ export default function Navbar({ onOpenQuote, onOpenCalculator, onOpenCommandPal
     },
     {
       title: 'Tema Quality Testing Lab',
-      desc: 'Continuous XRF clinker analysis and automated Blaine fineness testing',
+      desc: 'Continuous XRF mineral spectrometry and automated Blaine fineness testing',
       icon: FlaskConical,
       href: '/about/laboratory'
     },
@@ -181,7 +181,7 @@ export default function Navbar({ onOpenQuote, onOpenCalculator, onOpenCommandPal
     },
     {
       title: 'Raw Material Handling & Tema Port',
-      desc: 'Bulk conveyors and feed systems blending clinker, gypsum, and limestone from Tema Port',
+      desc: 'Bulk conveyors and feed systems blending raw materials and limestone from Tema Port',
       icon: Truck,
       href: '/plants/raw-material-handling'
     },

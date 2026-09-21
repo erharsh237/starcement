@@ -40,7 +40,7 @@ export default function AccreditationsPage({ onOpenQuote }) {
       standard: 'ISO 9001:2015 (Certificate # GH/QMS/24/0819)',
       issuer: 'SGS International Certification Body',
       validity: 'Valid through October 2027 (Triennial Re-certification)',
-      scope: 'Importation of clinker, grinding, computer-controlled blending, automated packaging, and nationwide bulk logistics of Portland cements.',
+      scope: 'High-purity raw materials handling, grinding, computer-controlled blending, automated packaging, and nationwide bulk logistics of Portland cements.',
       status: 'Certified & Audited',
       badge: 'International QMS',
       fileSize: '890 KB'
@@ -80,11 +80,11 @@ export default function AccreditationsPage({ onOpenQuote }) {
     },
     {
       id: 'GPHA-CON',
-      title: 'GPHA Deepwater Clinker Offloading Concession',
-      standard: 'Berth Protocol Concession # GPHA/OPS/CLNK/2022',
+      title: 'GPHA Deepwater Bulk Offloading Concession',
+      standard: 'Berth Protocol Concession # GPHA/OPS/PORT/2022',
       issuer: 'Ghana Ports and Harbours Authority (Tema)',
       validity: 'Long-term 25-Year Operational Lease',
-      scope: 'Direct-berth enclosed conveyor discharge from vessels directly into primary clinker dome, eliminating road haulage fugitive dust.',
+      scope: 'Direct-berth enclosed conveyor discharge from vessels directly into primary sealed domes, eliminating road haulage fugitive dust.',
       status: 'Fully Concessioned',
       badge: 'Maritime Infrastructure',
       fileSize: '1.7 MB'

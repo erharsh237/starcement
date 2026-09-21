@@ -7,14 +7,14 @@ export default function Sustainability() {
     {
       year: '2024',
       stage: 'Current Production Baseline',
-      title: 'Limestone Clinker Substitution under GS 1118-1:2024',
-      clinkerFactor: '0.72',
+      title: 'High-Efficiency Mineral Optimization under GS 1118-1:2024',
+      efficiencyFactor: '31.4 kWh/t',
       co2Intensity: '415 kg CO₂ / t',
       thermalSub: '12%',
-      summary: 'Production at the Tema grinding terminal has fully transitioned to CEM II/A-L and CEM II/B-L Portland Limestone Cement. High-purity reactive limestone replaces energy-intensive clinker, reducing thermal calcination emissions while optimizing grain packing density.',
+      summary: 'Production at the Kpone grinding terminal has fully transitioned to CEM II/A-L and CEM II/B-L Portland Limestone Cement. High-purity reactive limestone optimizes grain packing density, reducing embodied carbon emissions while delivering superior early hydration and 28-day structural strength.',
       technicalPoints: [
         'Interground mineral additions conforming to GS 1118-1:2024 standards',
-        'Blaine specific surface maintained at ≥ 340 m²/kg for early hydration kinetics',
+        'Blaine specific surface maintained at ≥ 340 m²/kg for rapid hydration kinetics',
         'Specific grinding energy consumption reduced to 31.4 kWh/t at finish mills'
       ]
     },
@@ -22,10 +22,10 @@ export default function Sustainability() {
       year: '2026',
       stage: 'Engineering Phase 1',
       title: 'Waste Heat Recovery (WHR) Co-Generation',
-      clinkerFactor: '0.68',
+      efficiencyFactor: '4.5 MW Clean Power',
       co2Intensity: '365 kg CO₂ / t',
       thermalSub: '24%',
-      summary: 'Installation of a closed-loop Organic Rankine Cycle (ORC) turbine capture system at the Tema facility. Low-grade thermal energy from roller presses and separator exhaust is converted into 4.5 MW of electrical power.',
+      summary: 'Installation of a closed-loop Organic Rankine Cycle (ORC) turbine capture system at the Kpone facility. Low-grade thermal energy from roller presses and separator exhaust is converted into 4.5 MW of captive electrical power.',
       technicalPoints: [
         'Annual fossil-fuel power grid reliance reduced by 28,000 MWh',
         'Zero fresh water consumption during closed-loop heat dissipation',
@@ -35,13 +35,13 @@ export default function Sustainability() {
     {
       year: '2028',
       stage: 'Engineering Phase 2',
-      title: 'Limestone Calcined Clay Cement (LC3) Commercialization',
-      clinkerFactor: '0.50',
+      title: 'Calcined Mineral Pozzolan Integration',
+      efficiencyFactor: '45% Carbon Cut',
       co2Intensity: '290 kg CO₂ / t',
       thermalSub: '38%',
-      summary: 'Commercial integration of flash-calcined low-grade kaolinitic clays sourced from domestic deposits in Ghana. The synergistic reaction between metakaolin and limestone matches CEM I structural performance with 50% less clinker.',
+      summary: 'Commercial integration of flash-calcined low-grade kaolinitic clays sourced from domestic deposits in Ghana. The synergistic reaction between metakaolin and limestone matches CEM I structural performance with significantly lower thermal footprint.',
       technicalPoints: [
-        '50% lower clinker factor without sacrificing 28-day 42.5R compressive target',
+        'Substantial carbon reduction without sacrificing 28-day 42.5R compressive target',
         'Significantly enhanced resistance to chloride intrusion for coastal marine foundations',
         'Utilizes domestic non-ceramic clay deposits unsuitable for pottery or brickmaking'
       ]
@@ -50,7 +50,7 @@ export default function Sustainability() {
       year: '2030',
       stage: 'Long-Range Commitment',
       title: 'Biomass & Alternative Fuel Thermal Co-Processing',
-      clinkerFactor: '0.45',
+      efficiencyFactor: '55% Clean Energy',
       co2Intensity: '220 kg CO₂ / t',
       thermalSub: '55%',
       summary: 'Full transition to agricultural residue co-processing (oil palm empty fruit bunches and shredded cocoa husks) to supply auxiliary calcination thermal requirements, achieving deep industrial decarbonization.',
@@ -65,10 +65,10 @@ export default function Sustainability() {
   const currentData = roadmap.find(item => item.year === activeStage) || roadmap[0];
 
   const comparisonTable = [
-    { type: 'Ordinary Portland (CEM I)', clinker: '95–100%', co2: '780 kg/t', strength28d: '45–52 MPa', marine: 'Moderate' },
-    { type: 'Star Cement 42.5R (CEM II/A-L)', clinker: '80–88%', co2: '415 kg/t', strength28d: '46–50 MPa', marine: 'High' },
-    { type: 'Star Cement 32.5R (CEM II/B-L)', clinker: '65–79%', co2: '350 kg/t', strength28d: '35–40 MPa', marine: 'Moderate-High' },
-    { type: 'Star LC3 Target (2028 Pipeline)', clinker: '50%', co2: '290 kg/t', strength28d: '48–54 MPa', marine: 'Very High (Dense)' }
+    { type: 'Ordinary Portland (CEM I)', standard: 'EN 197-1 Baseline', co2: '780 kg/t', strength28d: '45–52 MPa', marine: 'Moderate' },
+    { type: 'Star Cement 42.5R (CEM II/A-L)', standard: 'GS 1118:2024 / EN 197-1', co2: '415 kg/t', strength28d: '46–50 MPa', marine: 'High' },
+    { type: 'Star Cement 32.5R (CEM II/B-L)', standard: 'GS 1118:2024 / EN 197-1', co2: '350 kg/t', strength28d: '35–40 MPa', marine: 'Moderate-High' },
+    { type: 'Star LC3 Target (2028 Pipeline)', standard: 'Low-Carbon Standard', co2: '290 kg/t', strength28d: '48–54 MPa', marine: 'Very High (Dense)' }
   ];
 
   return (
@@ -81,10 +81,10 @@ export default function Sustainability() {
             Environmental Engineering & Standards Compliance
           </div>
           <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-neutral-950 leading-tight">
-            Decarbonization Roadmap: Lowering Clinker Factor
+            Decarbonization Roadmap & Energy Efficiency
           </h2>
           <p className="text-sm sm:text-base text-neutral-600 mt-3 leading-relaxed font-normal">
-            Star Cement combines limestone intergrinding, waste heat power generation, and calcined clay research to achieve deep industrial decarbonization while maintaining full 42.5R structural integrity under GS 1118-1:2024.
+            Star Cement Group of Companies Africa combines high-efficiency closed-circuit grinding, waste heat power generation, and advanced mineral optimization to achieve deep industrial decarbonization while maintaining full 42.5R structural integrity under GS 1118-1:2024.
           </p>
         </div>
 
@@ -108,7 +108,7 @@ export default function Sustainability() {
                     {item.year}
                   </span>
                   <span className={`font-mono text-xs ${isSelected ? 'text-neutral-400' : 'text-neutral-500'}`}>
-                    {item.clinkerFactor} Clinker Factor
+                    {item.efficiencyFactor}
                   </span>
                 </div>
                 <div className={`text-xs font-bold uppercase tracking-wider mb-1 ${isSelected ? 'text-white' : 'text-neutral-900'}`}>
@@ -156,11 +156,11 @@ export default function Sustainability() {
             <div className="lg:col-span-5 flex flex-col justify-between space-y-8 lg:pl-6 lg:border-l lg:border-neutral-200">
               <div className="space-y-6 font-mono">
                 <div className="border-b border-neutral-200 pb-5">
-                  <div className="text-xs font-bold text-neutral-500 uppercase tracking-wider">Target Clinker Factor</div>
+                  <div className="text-xs font-bold text-neutral-500 uppercase tracking-wider">Milling & Process Benchmark</div>
                   <div className="text-3xl sm:text-4xl font-extrabold text-neutral-950 mt-1">
-                    {currentData.clinkerFactor}
+                    {currentData.efficiencyFactor}
                   </div>
-                  <div className="text-xs text-neutral-500 font-sans mt-1">Clinker ratio to total binder mass</div>
+                  <div className="text-xs text-neutral-500 font-sans mt-1">Target operational energy metric</div>
                 </div>
 
                 <div className="border-b border-neutral-200 pb-5">
@@ -172,11 +172,11 @@ export default function Sustainability() {
                 </div>
 
                 <div>
-                  <div className="text-xs font-bold text-neutral-500 uppercase tracking-wider">Thermal Substitution</div>
+                  <div className="text-xs font-bold text-neutral-500 uppercase tracking-wider">Clean Energy Integration</div>
                   <div className="text-3xl sm:text-4xl font-extrabold text-neutral-950 mt-1">
                     {currentData.thermalSub}
                   </div>
-                  <div className="text-xs text-neutral-500 font-sans mt-1">Kiln thermal energy from recovered sources</div>
+                  <div className="text-xs text-neutral-500 font-sans mt-1">Industrial energy from recovered & renewable sources</div>
                 </div>
               </div>
 
@@ -209,7 +209,7 @@ export default function Sustainability() {
               <thead>
                 <tr className="border-b border-neutral-200 bg-neutral-50 text-neutral-600 uppercase tracking-wider text-xs">
                   <th className="py-4 px-6 font-bold font-sans">Binder Designation</th>
-                  <th className="py-4 px-6 font-bold">Clinker Ratio</th>
+                  <th className="py-4 px-6 font-bold">Standard Spec</th>
                   <th className="py-4 px-6 font-bold">Embodied CO₂</th>
                   <th className="py-4 px-6 font-bold">28-Day Strength</th>
                   <th className="py-4 px-6 font-bold font-sans">Marine Durability</th>
@@ -223,7 +223,7 @@ export default function Sustainability() {
                       <td className="py-4 px-6 text-neutral-950 font-sans font-medium">
                         {row.type}
                       </td>
-                      <td className="py-4 px-6">{row.clinker}</td>
+                      <td className="py-4 px-6">{row.standard}</td>
                       <td className={`py-4 px-6 ${isStar42 ? 'text-[#B91C1C] font-bold' : ''}`}>{row.co2}</td>
                       <td className="py-4 px-6">{row.strength28d}</td>
                       <td className="py-4 px-6 text-neutral-600 font-sans">{row.marine}</td>

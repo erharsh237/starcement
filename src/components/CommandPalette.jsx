@@ -82,7 +82,7 @@ export default function CommandPalette({ isOpen, onClose, onOpenQuote }) {
       id: 'term-materials',
       title: 'Raw Material Intake & Tema Port Logistics',
       category: 'Manufacturing Facility',
-      subtitle: 'Deepwater bulk clinker, gypsum, and limestone conveyors from upgraded Tema Port',
+      subtitle: 'Deepwater bulk mineral and limestone conveyors from upgraded Tema Port',
       icon: Truck,
       badge: 'Materials',
       action: () => navigate('/plants/raw-material-handling')
@@ -138,7 +138,7 @@ export default function CommandPalette({ isOpen, onClose, onOpenQuote }) {
       id: 'tech-lab',
       title: 'Tema Central Quality Testing Laboratory',
       category: 'Technical Dossier',
-      subtitle: 'XRF spectrometer clinker analysis, ToniTechnik presses & 28-day break tests',
+      subtitle: 'XRF spectrometer mineral analysis, ToniTechnik presses & 28-day break tests',
       icon: FileText,
       badge: 'Laboratory',
       action: () => navigate('/about/laboratory')

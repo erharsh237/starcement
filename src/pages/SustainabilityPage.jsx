@@ -23,7 +23,7 @@ export default function SustainabilityPage() {
               Building low-carbon infrastructure for tomorrow.
             </h1>
             <p className="text-sm sm:text-base text-neutral-300 leading-relaxed font-normal">
-              By replacing high-emission ordinary Portland clinker with finely ground active Ghanaian limestone and calcined clays under GS 1118-1:2024, Star Cement cuts embodied carbon by up to 34% without sacrificing early compressive strength.
+              By utilizing precision-ground active Ghanaian limestone and calcined clays under GS 1118-1:2024, Star Cement Group of Companies Africa cuts embodied carbon by up to 34% while delivering superior early compressive strength.
             </p>
           </div>
         </div>

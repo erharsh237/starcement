@@ -1,17 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Hero from '../components/Hero';
-import Products from '../components/Products';
-import Calculator from '../components/Calculator';
-import Projects from '../components/Projects';
-import PlantLocator from '../components/PlantLocator';
-import SalesRepLocator from '../components/SalesRepLocator';
-import Sustainability from '../components/Sustainability';
-import { ArrowRight, ShieldCheck, Truck, Users, Award, Building2 } from 'lucide-react';
+import CompanyProfileSection from '../components/CompanyProfileSection';
+import ProductsKnowledgeSection from '../components/ProductsKnowledgeSection';
+import OwnerKnowledgeSection from '../components/OwnerKnowledgeSection';
+import { ArrowRight, MapPin, Phone, ShieldCheck, Truck, Users, Award, Building2 } from 'lucide-react';
 
 export default function HomePage({ 
   onOpenQuote, 
   onOpenCalculator,
+  onOpenDealers,
   products,
   salesReps,
   plants,
@@ -28,7 +26,7 @@ export default function HomePage({
         onOpenCalculator={onOpenCalculator} 
       />
 
-      {/* 2. Continuous Industrial Scrolling Marquee Banner */}
+      {/* 2. Continuous Industrial Scrolling Marquee Banner (No Establishment Year) */}
       <section className="bg-neutral-900 border-y border-neutral-800 py-3 overflow-hidden select-none">
         <div className="animate-marquee flex items-center gap-8 text-[11px] font-mono font-bold tracking-widest text-neutral-300 uppercase whitespace-nowrap">
           <span className="flex items-center gap-2"><span className="text-[#B91C1C]">★</span> GS 1118:2024 CONFORMANT</span>
@@ -43,7 +41,7 @@ export default function HomePage({
           <span className="text-neutral-600">•</span>
           <span className="flex items-center gap-2"><span className="text-[#B91C1C]">★</span> PLOT AGR/IND/Y/5 KPONE INDUSTRIAL AREA</span>
           <span className="text-neutral-600">•</span>
-          <span className="flex items-center gap-2"><span className="text-[#B91C1C]">★</span> ESTABLISHED SINCE 2021</span>
+          <span className="flex items-center gap-2"><span className="text-[#B91C1C]">★</span> INTEGRATED MANAGEMENT SYSTEM (IMS) CERTIFIED</span>
           <span className="text-neutral-600">•</span>
           {/* Duplicate for seamless infinite loop */}
           <span className="flex items-center gap-2"><span className="text-[#B91C1C]">★</span> GS 1118:2024 CONFORMANT</span>
@@ -58,7 +56,7 @@ export default function HomePage({
           <span className="text-neutral-600">•</span>
           <span className="flex items-center gap-2"><span className="text-[#B91C1C]">★</span> PLOT AGR/IND/Y/5 KPONE INDUSTRIAL AREA</span>
           <span className="text-neutral-600">•</span>
-          <span className="flex items-center gap-2"><span className="text-[#B91C1C]">★</span> ESTABLISHED SINCE 2021</span>
+          <span className="flex items-center gap-2"><span className="text-[#B91C1C]">★</span> INTEGRATED MANAGEMENT SYSTEM (IMS) CERTIFIED</span>
         </div>
       </section>
 
@@ -86,71 +84,67 @@ export default function HomePage({
         </div>
       </section>
 
-      {/* 3. Products Showcase & Packaging Guide */}
-      <Products 
-        products={products}
-        onSelectProductForQuote={onSelectProductForQuote} 
+      {/* 4. COMPANY PROFILE (Mandate 1: Company Profile First) */}
+      <CompanyProfileSection 
+        onOpenDealers={onOpenDealers} 
       />
 
-      {/* 4. Batch Mix Design Calculator Preview */}
-      <Calculator 
-        onTransferToQuote={onTransferToQuote} 
+      {/* 5. PRODUCTS KNOWLEDGE (Mandate 2: Products Knowledge Second - Focus on Strengths & Applications) */}
+      <ProductsKnowledgeSection 
+        onSelectProductForQuote={onSelectProductForQuote}
+        onOpenCalculator={onOpenCalculator}
+        onOpenDealers={onOpenDealers}
       />
 
-      {/* 5. Landmark Infrastructure Projects Preview */}
-      <Projects />
+      {/* 6. OWNER'S KNOWLEDGE (Mandate 3: Owner's Knowledge Third - Promoters & Directorate) */}
+      <OwnerKnowledgeSection />
 
-      {/* 6. Flagship Greenfield Grinding Plant (Kpone Industrial Area) */}
-      <PlantLocator 
-        plants={plants}
-        onSelectPlantForQuote={onSelectPlantForQuote}
-      />
-
-      {/* 7. Territory Sales Representatives & GPS Finder */}
-      <SalesRepLocator 
-        salesReps={salesReps}
-        onContactRep={onContactRep} 
-      />
-
-      {/* 8. Decarbonization & Sustainability Roadmap */}
-      <Sustainability />
-
-      {/* 9. Corporate Action Strip to Multi-Page Portals */}
-      <section className="bg-neutral-900 text-white py-14 border-t border-neutral-800 reveal-init">
+      {/* 7. Corporate Dispatch & Authorized Dealer Action Strip */}
+      <section className="bg-neutral-950 text-white py-14 border-t border-neutral-800 reveal-init">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-children">
-            <div className="p-6 bg-neutral-800/60 rounded-lg border border-neutral-700/60 hover:border-[#B91C1C]/60 transition-colors reveal-card">
-              <h3 className="text-lg font-serif font-bold text-white mb-2">About Star Cement</h3>
+            <div className="p-6 bg-neutral-900/80 rounded-lg border border-neutral-800 hover:border-[#B91C1C]/60 transition-colors reveal-card">
+              <div className="w-8 h-8 rounded bg-red-950 text-[#B91C1C] flex items-center justify-center mb-3">
+                <MapPin className="w-4 h-4" />
+              </div>
+              <h3 className="text-lg font-serif font-bold text-white mb-2">Authorized Dealers Directory</h3>
               <p className="text-xs text-neutral-400 leading-relaxed mb-4">
-                Learn more about our heritage, executive governance, state-of-the-art Tema laboratory, and ISO quality accreditations.
+                Locate verified Star Cement distributors and stockists with phone numbers, state, city, and delivery fleet across Ghana.
+              </p>
+              <button 
+                type="button"
+                onClick={onOpenDealers} 
+                className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#B91C1C] hover:text-red-400 transition-colors cursor-pointer"
+              >
+                <span>Browse Authorized Dealers</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+
+            <div className="p-6 bg-neutral-900/80 rounded-lg border border-neutral-800 hover:border-[#B91C1C]/60 transition-colors reveal-card">
+              <div className="w-8 h-8 rounded bg-red-950 text-[#B91C1C] flex items-center justify-center mb-3">
+                <Building2 className="w-4 h-4" />
+              </div>
+              <h3 className="text-lg font-serif font-bold text-white mb-2">Manufacturing Facility</h3>
+              <p className="text-xs text-neutral-400 leading-relaxed mb-4">
+                Explore our 750,000 MT Kpone plant, 75 TPH closed-circuit grinding circuit, and monolithic slip-form silo complex.
               </p>
               <Link 
-                to="/about" 
+                to="/plants" 
                 className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#B91C1C] hover:text-red-400 transition-colors"
               >
-                <span>Read Company Story</span>
+                <span>View Plant Architecture</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
 
-            <div className="p-6 bg-neutral-800/60 rounded-lg border border-neutral-700/60 hover:border-[#B91C1C]/60 transition-colors reveal-card">
-              <h3 className="text-lg font-serif font-bold text-white mb-2">Technical Specifications</h3>
+            <div className="p-6 bg-neutral-900/80 rounded-lg border border-neutral-800 hover:border-[#B91C1C]/60 transition-colors reveal-card">
+              <div className="w-8 h-8 rounded bg-red-950 text-[#B91C1C] flex items-center justify-center mb-3">
+                <Phone className="w-4 h-4" />
+              </div>
+              <h3 className="text-lg font-serif font-bold text-white mb-2">Central Dispatch Operations</h3>
               <p className="text-xs text-neutral-400 leading-relaxed mb-4">
-                Explore in-depth mechanical and chemical datasheets for 42.5R Rapid Hardening and 32.5R General Purpose formulations.
-              </p>
-              <Link 
-                to="/products" 
-                className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#B91C1C] hover:text-red-400 transition-colors"
-              >
-                <span>View Certified Formulations</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
-            </div>
-
-            <div className="p-6 bg-neutral-800/60 rounded-lg border border-neutral-700/60 hover:border-[#B91C1C]/60 transition-colors reveal-card">
-              <h3 className="text-lg font-serif font-bold text-white mb-2">Direct Commercial Dispatch</h3>
-              <p className="text-xs text-neutral-400 leading-relaxed mb-4">
-                Contact our central Tema dispatch desk or connect with our regional commercial officers for institutional supply contracts.
+                Direct hotline to our Kpone commercial dispatch desk for 50kg bag pallet orders and pressurized bulk road tanker dispatch.
               </p>
               <Link 
                 to="/contact" 
